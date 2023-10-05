@@ -7,10 +7,10 @@ import './Carousel.css'
 export const Carousel = ({ data }) => {
   // eslint-disable-next-line react/prop-types
   return (
-    <div>
+    <div className="carousel">
       {data.map((item, idx) => {
         // eslint-disable-next-line react/jsx-key
-        return <img src={item.src} alt={item.alt} key={idx} />
+        return <img src={item.src} alt={item.alt} key={idx} className="slide" />
       })}
     </div>
   )
