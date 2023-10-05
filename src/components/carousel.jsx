@@ -10,6 +10,14 @@ export const Carousel = ({ data }) => {
   // eslint-disable-next-line no-unused-vars
   const [slide, setSlide] = useState(0)
 
+  const nextSlide = () => {
+    setSlide(slide + 1)
+  }
+
+  const prevSlide = () => {
+    setSlide(slide - 1)
+  }
+
   // eslint-disable-next-line react/prop-types
   return (
     <div className="carousel">
