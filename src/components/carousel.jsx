@@ -1,7 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import './carousel.css'
-const carousel = () => {
-  return <div>carousel</div>
-}
+import './Carousel.css'
 
-export default carousel
+export const Carousel = () => {
+  return (
+    <div>
+      <div>Carousel</div>
+    </div>
+  )
+}
