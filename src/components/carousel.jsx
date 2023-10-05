@@ -7,6 +7,7 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs'
 // eslint-disable-next-line react/prop-types
 export const Carousel = ({ data }) => {
   // set variable & state for slide
+  // eslint-disable-next-line no-unused-vars
   const [slide, setSlide] = useState(0)
 
   // eslint-disable-next-line react/prop-types
@@ -26,10 +27,16 @@ export const Carousel = ({ data }) => {
         )
       })}
       <BsArrowRightCircleFill className="arrow arrow-right" />
-      <span className="indicators">
+      <span className={'indicators'}>
         {data.map((_, idx) => {
           return (
-            <button key={idx} onClick={null} className="indicator"></button>
+            <button
+              key={idx}
+              onClick={null}
+              className={
+                slide === idx ? 'indicator' : 'indicator indicator-inactive'
+              }
+            ></button>
           )
         })}
       </span>
