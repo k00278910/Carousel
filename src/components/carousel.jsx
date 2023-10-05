@@ -11,11 +11,13 @@ export const Carousel = ({ data }) => {
   const [slide, setSlide] = useState(0)
 
   const nextSlide = () => {
-    setSlide(slide + 1)
+    // if slide image is equal to max, wrap it around to first image
+    setSlide(slide === data.length - 1 ? 0 : slide + 1)
   }
 
   const prevSlide = () => {
-    setSlide(slide - 1)
+    // if slide image is equal to zero, wrap it around to final image
+    setSlide(slide === 0 ? data.length - 1 : slide - 1)
   }
 
   // eslint-disable-next-line react/prop-types
